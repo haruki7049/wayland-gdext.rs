@@ -8,3 +8,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 godot = { version = "0.4.2", features = ["api-4-4"] }
+smithay = "0.7.0"

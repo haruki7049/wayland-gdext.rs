@@ -40,6 +40,10 @@
           overlays = [ inputs.rust-overlay.overlays.default ];
 
           src = lib.cleanSource ./rust;
+          buildInputs = [
+            pkgs.seatd
+            pkgs.systemd
+          ];
           nativeBuildInputs = [
             # Compiler & Runtime
             rust # Rust
@@ -53,12 +57,13 @@
           ];
 
           cargoArtifacts = craneLib.buildDepsOnly {
-            inherit src nativeBuildInputs;
+            inherit src buildInputs nativeBuildInputs;
           };
           wayland-gdext-rs = craneLib.buildPackage {
             inherit
               src
               cargoArtifacts
+              buildInputs
               nativeBuildInputs
               ;
             strictDeps = true;
@@ -72,6 +77,7 @@
             inherit
               src
               cargoArtifacts
+              buildInputs
               nativeBuildInputs
               ;
             cargoClippyExtraArgs = "--verbose -- --deny warnings";
@@ -80,6 +86,7 @@
             inherit
               src
               cargoArtifacts
+              buildInputs
               nativeBuildInputs
               ;
           };
@@ -124,7 +131,7 @@
           };
 
           devShells.default = pkgs.mkShell {
-            inherit nativeBuildInputs;
+            inherit buildInputs nativeBuildInputs;
 
             shellHook = ''
               export PS1="\n[nix-shell:\w]$ "
