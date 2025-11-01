@@ -1,8 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    systems.url = "github:nix-systems/default";
-
+    systems.url = "github:nix-systems/default-linux";
     crane.url = "github:ipetkov/crane";
     flake-compat.url = "github:edolstra/flake-compat";
     flake-parts = {
