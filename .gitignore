@@ -1,0 +1,6 @@
+# Nix's result
+result
+result-*
+
+# Direnv's dotfiles
+.direnv/
