@@ -1,0 +1,14 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.1
+reloadable = true
+
+[libraries]
+linux.debug.x86_64 =     "res://../rust/target/debug/libwlroots_gdext_rs.so"
+linux.release.x86_64 =   "res://../rust/target/release/libwlroots_gdext_rs.so"
+windows.debug.x86_64 =   "res://../rust/target/debug/wlroots_gdext_rs.dll"
+windows.release.x86_64 = "res://../rust/target/release/wlroots_gdext_rs.dll"
+macos.debug =            "res://../rust/target/debug/libwlroots_gdext_rs.dylib"
+macos.release =          "res://../rust/target/release/libwlroots_gdext_rs.dylib"
+macos.debug.arm64 =      "res://../rust/target/debug/libwlroots_gdext_rs.dylib"
+macos.release.arm64 =    "res://../rust/target/release/libwlroots_gdext_rs.dylib"
