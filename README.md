@@ -1,1 +1,1 @@
-# wlroots-gdext.rs
+# wayland-gdext.rs

@@ -56,7 +56,7 @@
           cargoArtifacts = craneLib.buildDepsOnly {
             inherit src nativeBuildInputs;
           };
-          wlroots-gdext-rs = craneLib.buildPackage {
+          wayland-gdext-rs = craneLib.buildPackage {
             inherit
               src
               cargoArtifacts
@@ -115,8 +115,8 @@
           };
 
           packages = {
-            inherit wlroots-gdext-rs;
-            default = wlroots-gdext-rs;
+            inherit wayland-gdext-rs;
+            default = wayland-gdext-rs;
             doc = cargo-doc;
           };
 

@@ -1,5 +1,5 @@
 [package]
-name = "wlroots_gdext_rs"
+name = "wayland_gdext_rs"
 version = "0.1.0"
 edition = "2024"
 
