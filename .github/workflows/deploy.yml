@@ -12,11 +12,17 @@ jobs:
     # Job name, can be anything
     name: Export Game
     steps:
-      # Always include the checkout step so that 
-      # your project is available for Godot to export
     - name: checkout
       uses: actions/checkout@v5
-  
+
+    - name: Setup rust
+      uses: dtolnay/rust-toolchain@6d653acede28d24f02e3cd41383119e8b1b35921 # Uses master branch
+    - name: Compile rust extension
+      run: |
+        cd rust
+        cargo build --release
+        cargo build
+
     - name: export game
       id: export
       # Use latest version (see releases for all versions)
