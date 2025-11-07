@@ -15,6 +15,10 @@ jobs:
     - name: checkout
       uses: actions/checkout@v5
 
+    - name: Get dependencies from Apt, not Nix
+      run: |
+        apt install libseat-dev libudev-dev
+
     - name: Setup Rust cache
       uses: Swatinem/rust-cache@v2
     - name: Setup rust
