@@ -37,7 +37,7 @@ jobs:
         archive_output: true
 
     - name: Create release
-      uses: ncipollo/release-action@1.20.0
+      uses: ncipollo/release-action@v1.20.0
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         generateReleaseNotes: true
