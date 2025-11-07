@@ -15,8 +15,13 @@ jobs:
     - name: checkout
       uses: actions/checkout@v5
 
+    - name: Setup Rust cache
+      uses: Swatinem/rust-cache@v2
     - name: Setup rust
       uses: dtolnay/rust-toolchain@6d653acede28d24f02e3cd41383119e8b1b35921 # Uses master branch
+      with:
+        toolchain: 1.91.0
+        components: clippy, rust-analyzer, rust-src
     - name: Compile rust extension
       run: |
         cd rust
