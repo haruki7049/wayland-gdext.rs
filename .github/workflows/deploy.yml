@@ -17,7 +17,7 @@ jobs:
 
     - name: Get dependencies from Apt, not Nix
       run: |
-        apt install libseat-dev libudev-dev
+        sudo apt-get install -y libseat-dev libudev-dev
 
     - name: Setup Rust cache
       uses: Swatinem/rust-cache@v2
