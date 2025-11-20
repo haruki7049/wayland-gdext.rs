@@ -4,11 +4,11 @@ compatibility_minimum = 4.1
 reloadable = true
 
 [libraries]
-linux.debug.x86_64 =     "res://../rust/target/debug/libwayland_gdext_rs.so"
-linux.release.x86_64 =   "res://../rust/target/release/libwayland_gdext_rs.so"
-windows.debug.x86_64 =   "res://../rust/target/debug/wayland_gdext_rs.dll"
-windows.release.x86_64 = "res://../rust/target/release/wayland_gdext_rs.dll"
-macos.debug =            "res://../rust/target/debug/libwayland_gdext_rs.dylib"
-macos.release =          "res://../rust/target/release/libwayland_gdext_rs.dylib"
-macos.debug.arm64 =      "res://../rust/target/debug/libwayland_gdext_rs.dylib"
-macos.release.arm64 =    "res://../rust/target/release/libwayland_gdext_rs.dylib"
+linux.debug.x86_64 =     "res://../target/debug/libwayland_gdext_rs.so"
+linux.release.x86_64 =   "res://../target/release/libwayland_gdext_rs.so"
+windows.debug.x86_64 =   "res://../target/debug/wayland_gdext_rs.dll"
+windows.release.x86_64 = "res://../target/release/wayland_gdext_rs.dll"
+macos.debug =            "res://../target/debug/libwayland_gdext_rs.dylib"
+macos.release =          "res://../target/release/libwayland_gdext_rs.dylib"
+macos.debug.arm64 =      "res://../target/debug/libwayland_gdext_rs.dylib"
+macos.release.arm64 =    "res://../target/release/libwayland_gdext_rs.dylib"
